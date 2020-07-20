@@ -16,7 +16,7 @@ public class ManageDownload extends JFrame implements Observer {
     private boolean clearing;
     public ManageDownload(){
         setTitle("Download Manager");
-        setSize(640,480);
+        setSize(760,600);
         addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e){
                 actionExit();
