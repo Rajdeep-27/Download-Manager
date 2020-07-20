@@ -3,7 +3,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 
 class TableMod extends AbstractTableModel implements Observer{
-    private static final String[] columnNames={"URL","Sze","Progress","Status"};    
+    private static final String[] titles={"URL","Sze","Progress","Status"};    
     private static final Class[] columnClasses= {String.class, String.class,JProgressBar.class,String.class};
     private ArrayList<Download>downloads=new ArrayList<Download>();
     
@@ -23,11 +23,11 @@ class TableMod extends AbstractTableModel implements Observer{
     }
 
     public int getColumnCount(){
-        return columnNames.length;
+        return titles.length;
     }
 
-    public String getNameColumn(int col){
-        return columnNames[col];
+    public String getColumnName(int col){
+        return titles[col];
     }
 
     public Class getColClass(int col){
